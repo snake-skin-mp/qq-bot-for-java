@@ -1,0 +1,6 @@
+CSnakeProject/
+*.o
+*.exe
+*.pdb
+bin/
+obj/

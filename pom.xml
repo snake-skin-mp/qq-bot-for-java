@@ -33,12 +33,24 @@
     </repositories>
 
     <dependencies>
+
+        <!--cool q -->
         <dependency>
             <groupId>com.github.hydevelop</groupId>
             <artifactId>PicqBotX</artifactId>
             <version>4.12.0.1019.PRE</version>
         </dependency>
 
+
+        <!--han NLP-->
+        <dependency>
+            <groupId>com.hankcs</groupId>
+            <artifactId>hanlp</artifactId>
+            <version>portable-1.7.1</version>
+        </dependency>
+
+
+        <!-- 爬虫 相关以下都是-->
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -63,6 +75,7 @@
             <version>1.2.62</version>
         </dependency>
 
+        <!-- common  io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>

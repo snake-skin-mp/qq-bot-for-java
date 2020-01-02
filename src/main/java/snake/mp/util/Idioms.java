@@ -4,10 +4,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * 成语接龙
@@ -15,7 +12,7 @@ import java.util.Random;
 public class Idioms {
     //2014,"大动干戈","dà  dòng  gān  gē","大规模地进行战争。比喻大张声势地行事。",,"同学们应友好相处，不能为一些小事情而～。","ddgg"
     static HashMap<String, List<String>> idiomsMap =new HashMap<>();
-    static HashMap<Character,String> spellMap =new HashMap<>();
+    static HashMap<Character, TreeMap<String,Integer>> spellMap =new HashMap<>();
     static  {
         try {
             for (String e : FileUtils.readLines(new File("chinese-idioms-12976.txt"), "utf-8")) {
@@ -27,7 +24,8 @@ public class Idioms {
     //                System.out.println(s);
                     String[] words = sound.trim().split("\\s+");
                     for (int i = 0; i < name.length(); i++) {
-                        spellMap.put(name.charAt(i),words[i]);
+                        Map<String, Integer> stringIntegerMap = spellMap.computeIfAbsent(name.charAt(i), val -> new TreeMap<>());
+                        stringIntegerMap.put(words[i],stringIntegerMap.computeIfAbsent(words[i],val->0)+1);
                     }
                     idiomsMap.computeIfAbsent(words[0],es->new ArrayList<>()).add(name);
     //                System.out.println(words[0]+","+name);
@@ -39,9 +37,15 @@ public class Idioms {
     }
 
     private static Random random = new Random();
-    public static String get(String Idiom){
-        char c = Idiom.charAt(Idiom.length()-1);
-        List<String> list = idiomsMap.get(spellMap.get(c));
+    public static String get(String idiom){
+        return get(idiom,0);
+    }
+
+    public static String get(String idiom,int index){
+        char c = idiom.charAt(idiom.length()-1);
+        List<Map.Entry<String, Integer>> entries = new ArrayList<>(spellMap.get(c).entrySet());
+        entries.sort((a,b)-> b.getValue()-a.getValue());
+        List<String> list = idiomsMap.get(entries.get(0).getKey());
         return list.get(random.nextInt(list.size()));
     }
 

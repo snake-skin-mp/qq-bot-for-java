@@ -23,6 +23,14 @@ JNIEXPORT void JNICALL Java_snake_mp_util_JavaCallCTools_init
 JNIEXPORT jstring JNICALL Java_snake_mp_util_JavaCallCTools_get_1reply
   (JNIEnv *, jobject, jstring);
 
+
+// 用于 py 调用
+JNIEXPORT void JNICALL init();
+
+// 用于 py 调用
+JNIEXPORT void JNICALL get_reply(const char *str, char *reply);
+
+
 #ifdef __cplusplus
 }
 #endif

@@ -147,9 +147,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="snake_mp_util_JavaCallCTools.h" />
+    <ClInclude Include="String_convert.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="snake_mp_util_JavaCallCTools.cpp" />
+    <ClCompile Include="String_convert.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,9 +18,15 @@
     <ClInclude Include="snake_mp_util_JavaCallCTools.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="String_convert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="snake_mp_util_JavaCallCTools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="String_convert.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

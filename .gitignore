@@ -1,5 +1,6 @@
 IdiomSearch/
 dict/
+-jni/
 *.class
 *.exp
 *.lib

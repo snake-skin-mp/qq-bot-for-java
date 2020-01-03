@@ -1,9 +1,9 @@
-IdiomSearch/		# 该项目目前不可用
-dict/				# 词典先不需要
+IdiomSearch/
+dict/
 *.class
 *.exp
 *.lib
-# *.dll		# 先推上去吧
+*.dll
 
 
 

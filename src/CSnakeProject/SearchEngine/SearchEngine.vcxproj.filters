@@ -15,13 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="snake_mp_util_JavaCallCTools.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="snake_mp_util_JavaCallCTools.cpp">
+    <ClCompile Include="Documents.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Query.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Documents.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Query.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

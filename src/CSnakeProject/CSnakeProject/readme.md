@@ -1,3 +1,5 @@
+## CSnakeProject 项目
+
 ### 编译流程
 
 1. 项目属性中选择：`Release x64`
@@ -7,9 +9,20 @@
 5. 配置属性——VC++目录——包含目录 添加头文件路径：`JDK/include` 以及包含在此文件内所有需要的头文件
 6. C/C++——语言——符合模式 修改为 `否`
 7. C/C++——语言——OpenMP支持 修改为 `是（/openmp）`
-8. 确定保存，选择 `Release x64`，生成——生成解决方案
+8. 链接器——输入——附加依赖项 链接 MKL（见下面）
+9. 确定保存，选择 `Release x64`，生成——生成解决方案
 
 ### 运行方式
 
 在 `lib` 下找到 `ctools.dll`，放入 Java 动态链接库环境内，运行 Java 程序测试
+
+该项目主要是提供 `java` 调用的接口。
+
+该项目依赖于 `AutoChat` ，需要最后生成，且需要链接 MKL 的静态库:
+
+```
+D:\IntelSWTools\compilers_and_libraries_2019.5.281\windows\mkl\lib\intel64_win\mkl_intel_lp64.lib
+D:\IntelSWTools\compilers_and_libraries_2019.5.281\windows\mkl\lib\intel64_win\mkl_sequential.lib
+D:\IntelSWTools\compilers_and_libraries_2019.5.281\windows\mkl\lib\intel64_win\mkl_core.lib
+```
 

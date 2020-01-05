@@ -5,7 +5,8 @@ dict/
 *.exp
 *.lib
 *.dll
-
+trainset.txt
+聊天记录.txt
 
 
 ## Ignore Visual Studio temporary files, build results, and

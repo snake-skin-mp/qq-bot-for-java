@@ -6,8 +6,9 @@ dict/
 *.lib
 *.dll
 trainset.txt
+learn.txt
 聊天记录.txt
-src\CSnakeProject\include
+src/CSnakeProject/include
 
 
 ## Ignore Visual Studio temporary files, build results, and

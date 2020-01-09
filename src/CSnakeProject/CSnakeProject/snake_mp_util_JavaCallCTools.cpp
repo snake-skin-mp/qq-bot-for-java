@@ -28,5 +28,8 @@ JNIEXPORT void JNICALL get_reply(const char *str, char *reply) {
 	cout << "call c get_reply() and recv " << String_convert::utf8_to_string(str) << endl;
 
 	string s = AutoChat::get_reply(str);
+	cout << "ok" << endl;
 	strcpy_s(reply, 1024, s.c_str());
+	cout << "ok" << endl;
+
 }
